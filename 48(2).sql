@@ -9,8 +9,8 @@ WHERE O.result = 'sunk'
 
 UNION
 
-SELECT class FROM Classes C LEFT JOIN Outcomes O
-ON O.ship = C.class WHERE O.result = 'sunk'
+SELECT class FROM Classes C
+LEFT JOIN Outcomes O ON O.ship = C.class WHERE O.result = 'sunk'
 
 
 
