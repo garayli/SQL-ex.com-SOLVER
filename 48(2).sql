@@ -1,9 +1,7 @@
 /* Find the ship classes having at least one ship sunk in battles. 
-
  · Help topics:
     Explicit join operations
     UNION  */
-
 
 SELECT class FROM Ships S 
 LEFT JOIN Outcomes O ON S.name = O.ship
