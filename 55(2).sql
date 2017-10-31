@@ -5,16 +5,12 @@ If the lead ship’s year of launch is not known, get the minimum year of launch
 Result set: class, year. */
 
 
-SELECT s.class AS class, MIN(launched) AS year
-
-FROM Ships s
+SELECT s.class AS class, MIN(launched) AS year FROM Ships s
 
 GROUP BY s.class
 
 UNION 
 
-SELECT c.class AS class, MIN (launched) AS year
-
-FROM Ships s FULL JOIN Classes c ON s.class = c.class
+SELECT c.class AS class, MIN (launched) AS year FROM Ships s FULL JOIN Classes c ON s.class = c.class
 
 GROUP BY c.class
