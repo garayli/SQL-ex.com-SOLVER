@@ -7,5 +7,6 @@ GROUP BY s.class
 
 UNION 
 
-SELECT c.class AS class, MIN (launched) AS year FROM Ships s FULL JOIN Classes c ON s.class = c.class
+SELECT c.class AS class, MIN (launched) AS year 
+FROM Ships s FULL JOIN Classes c ON s.class = c.class
 GROUP BY c.class
